@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive To-Do List | Dev Raj Gupta</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="app.js" defer></script>
+</head>
+<body>
+  <header>
+    <div class="header-inner">
+      <div class="brand-title">
+        <span class="brand-dot" aria-hidden="true"></span>
+        <span>Dev Raj Gupta &middot; Task Manager</span>
+      </div>
+      <div class="header-meta">Project 02 &middot; LocalStorage Web App</div>
+    </div>
+  </header>
+
+  <main>
+    <section class="todo-card" aria-labelledby="app-title">
+      <div class="card-header">
+        <span class="eyebrow">Fullstack Web Development</span>
+        <h1 id="app-title">Interactive To-Do List</h1>
+        <p class="subtitle">Add, complete, filter, and manage your daily tasks with automatic browser persistence.</p>
+      </div>
+
+      <form id="form" novalidate>
+        <input
+          id="text"
+          type="text"
+          placeholder="What needs to be done?"
+          autocomplete="off"
+          aria-label="New task description"
+          required
+        >
+        <button type="submit" class="btn btn-add">Add Task</button>
+      </form>
+
+      <div id="feedback" class="feedback-msg" role="alert" aria-live="polite"></div>
+
+      <div class="toolbar" role="region" aria-label="Task controls and filters">
+        <p id="count" aria-live="polite">0 left</p>
+        <div class="filter-group" role="group" aria-label="Filter tasks by status">
+          <button type="button" class="filter-btn active" data-filter="all" aria-pressed="true">All</button>
+          <button type="button" class="filter-btn" data-filter="active" aria-pressed="false">Active</button>
+          <button type="button" class="filter-btn" data-filter="done" aria-pressed="false">Done</button>
+        </div>
+      </div>
+
+      <ul id="list" aria-label="Task list"></ul>
+
+      <div id="empty-state" class="empty-state">
+        <p id="empty-message">No tasks yet. Add your first task above and press Enter or click Add Task.</p>
+      </div>
+
+      <div class="card-footer">
+        <span class="storage-badge">
+          <span class="storage-dot" aria-hidden="true"></span>
+          <span>Auto-saved in LocalStorage</span>
+        </span>
+        <button type="button" id="clear-completed" class="btn btn-secondary" disabled>
+          Clear completed
+        </button>
+      </div>
+    </section>
+  </main>
+
+  <footer>
+    <p>
+      Built by <strong>Dev Raj Gupta</strong> &middot;
+      <a href="https://github.com/devrajgupta3953-alt" target="_blank" rel="noopener noreferrer">GitHub</a> &middot;
+      <a href="https://devrajgupta3953-alt.github.io/r-Personal-Portfolio-Landing-Page/" target="_blank" rel="noopener noreferrer">Portfolio</a>
+    </p>
+  </footer>
+</body>
+</html>
